@@ -1,1 +1,48 @@
-<p>food-list works!</p>
+<mat-tab-group>
+  <mat-tab label="Bar">
+    <div>Bar List</div>
+    <div class="flex flex-col gap-1">
+      @for (barItem of barList(); track barItem.id) {
+        <div
+          class="flex items-center justify-between p-3 border rounded-lg shadow-sm hover:shadow-md transition"
+        >
+          <!-- Quantity controls -->
+          <div class="flex items-center gap-2">
+            <button
+              mat-icon-button
+              color="primary"
+              (click)="decreaseQuantity()"
+              aria-label="Decrease"
+            >
+              <mat-icon>remove</mat-icon>
+            </button>
+
+            <span class="w-8 text-center font-bold">{{ 0 || 0 }} </span>
+
+            <button
+              mat-icon-button
+              color="primary"
+              (click)="increaseQuantity()"
+              aria-label="Increase"
+            >
+              <mat-icon>add</mat-icon>
+            </button>
+          </div>
+
+          <!-- Item name -->
+          <div class="flex-1 text-left px-4 font-medium">
+            {{ barItem.name }}
+          </div>
+
+          <!-- Price -->
+          <div class="font-semibold">
+            {{ barItem.price | currency: "EUR" }}
+          </div>
+        </div>
+      }
+    </div>
+  </mat-tab>
+  <mat-tab label="Pasta"> Content 2 </mat-tab>
+  <mat-tab label="Main"> Content 3 </mat-tab>
+  <mat-tab label="Dessert"> Content 3 </mat-tab>
+</mat-tab-group>

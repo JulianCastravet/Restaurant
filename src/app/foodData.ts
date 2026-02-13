@@ -11,13 +11,13 @@ export const food: Food[] = [
     id: 2,
     name: 'Polenta e Squacquerone',
     price: 8,
-    type: 'appetizer',
+    type: 'starter',
   },
   {
     id: 3,
     name: 'Affettati Misti con Piadina',
     price: 14,
-    type: 'appetizer',
+    type: 'starter',
   },
   {
     id: 4,

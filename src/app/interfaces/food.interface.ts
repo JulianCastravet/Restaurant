@@ -1,9 +1,9 @@
 export interface Food {
-  id: number,
-  name: string,
-  price: number,
-  type: FoodType,
-  note?: string
+  id: number;
+  name: string;
+  price: number;
+  type: FoodType;
+  note?: string;
 }
 
-export type FoodType = 'appetizer'|'pasta'| 'main'|'side'|'dessert';
+export type FoodType = 'starter' | 'pasta' | 'main' | 'side' | 'dessert';

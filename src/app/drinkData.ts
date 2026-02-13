@@ -1,6 +1,6 @@
 import { Drink } from './interfaces/drink.interface';
 
-export const food: Drink[] = [
+export const drinks: Drink[] = [
   {
     id: 1,
     name: 'Acqua Naturale',

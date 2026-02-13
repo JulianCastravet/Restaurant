@@ -1,0 +1,32 @@
+<div class="mx-auto p-4 bg-gray-100 rounded-lg shadow-lg">
+  <div
+    class="bg-black text-white text-right text-3xl font-bold p-4 rounded mb-4"
+  >
+    {{ totalConsumers() || "0" }}
+  </div>
+
+  <div class="grid grid-cols-3 gap-2">
+    @for (number of numbers; track $index) {
+      <button
+        class="bg-gray-200 hover:bg-gray-300 text-xl font-bold py-4 rounded"
+        [attr.value]="number?.value"
+        (click)="onNumberPress(number.value)"
+      >
+        {{ number?.title }}
+      </button>
+    }
+
+    <button
+      class="bg-yellow-200 hover:bg-gray-300 text-xl font-bold py-4 rounded col-span-1"
+      (click)="submitConsumers()"
+    >
+      OK
+    </button>
+    <button
+      class="bg-orange-200 hover:bg-gray-300 text-xl font-bold py-4 rounded col-span-1"
+      (click)="removeLastChar()"
+    >
+      {{ "<-" }}
+    </button>
+  </div>
+</div>

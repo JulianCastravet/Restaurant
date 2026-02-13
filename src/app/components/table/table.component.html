@@ -1,0 +1,22 @@
+<div
+  class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-200 p-4 flex flex-col justify-between border border-gray-200 cursor-pointer"
+  (click)="emitTableEvent()"
+>
+  <!-- Top: Table Name -->
+  <div class="text-lg font-semibold text-gray-800">
+    {{ table().name }}
+  </div>
+
+  <!-- Middle: Guests -->
+  <div class="flex items-center gap-2 text-gray-500 mt-2">
+    <span class="text-purple-600">👥</span>
+    <span>{{ table().people }} guests</span>
+  </div>
+
+  <!-- Bottom: Amount -->
+  <div class="flex justify-end mt-4">
+    <span class="text-lg font-bold text-green-600">
+      € {{ table().moneyAmmount }}
+    </span>
+  </div>
+</div>

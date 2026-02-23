@@ -4,6 +4,7 @@ export interface Drink {
   price: number;
   type: DrinkType;
   note?: string;
+  quantity: number;
 }
 
 export type DrinkType = 'soft_drink' | 'cocktail' | 'coffee' | 'wine';

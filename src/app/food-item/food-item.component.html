@@ -1,0 +1,37 @@
+<div
+  class="flex items-center justify-between p-3 border rounded-lg shadow-sm hover:shadow-md transition"
+>
+  <!-- Quantity controls -->
+  <div class="flex items-center gap-2">
+    <button
+      mat-icon-button
+      color="primary"
+      (click)="decreaseQuantity(foodItem())"
+      aria-label="Decrease"
+      [disabled]="!foodItem().quantity"
+    >
+      <mat-icon>remove</mat-icon>
+    </button>
+
+    <span class="w-8 text-center font-bold">{{ foodItem().quantity }} </span>
+
+    <button
+      mat-icon-button
+      color="primary"
+      (click)="increaseQuantity(foodItem())"
+      aria-label="Increase"
+    >
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+
+  <!-- Item name -->
+  <div class="flex-1 text-left px-4 font-medium">
+    {{ foodItem().name }}
+  </div>
+
+  <!-- Price -->
+  <div class="font-semibold">
+    {{ foodItem().price | currency: "EUR" }}
+  </div>
+</div>

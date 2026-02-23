@@ -72,7 +72,7 @@ export const TablesData: Table[] = [
     course: 0,
   },
   {
-    id: 7,
+    id: 8,
     name: 'S4',
     people: 0,
     drinks: [],
@@ -82,7 +82,7 @@ export const TablesData: Table[] = [
     course: 0,
   },
   {
-    id: 8,
+    id: 9,
     name: 'T1',
     people: 0,
     drinks: [],
@@ -92,7 +92,7 @@ export const TablesData: Table[] = [
     course: 0,
   },
   {
-    id: 9,
+    id: 10,
     name: 'T2',
     people: 0,
     drinks: [],
@@ -102,7 +102,7 @@ export const TablesData: Table[] = [
     course: 0,
   },
   {
-    id: 10,
+    id: 11,
     name: 'T3',
     people: 0,
     drinks: [],
@@ -112,7 +112,7 @@ export const TablesData: Table[] = [
     course: 0,
   },
   {
-    id: 11,
+    id: 12,
     name: 'T4',
     people: 0,
     drinks: [],
@@ -122,7 +122,7 @@ export const TablesData: Table[] = [
     course: 0,
   },
   {
-    id: 12,
+    id: 13,
     name: 'T5',
     people: 0,
     drinks: [],
@@ -132,7 +132,7 @@ export const TablesData: Table[] = [
     course: 0,
   },
   {
-    id: 13,
+    id: 14,
     name: 'T6',
     people: 0,
     drinks: [],

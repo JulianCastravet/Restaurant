@@ -3,15 +3,23 @@
     <app-table-places (submitPeople)="handleCountStepper($event)">
     </app-table-places>
   </mat-step>
-  <mat-step [stepControl]="secondFormGroup">
-    <form [formGroup]="secondFormGroup">
-    <app-food-list></app-food-list>
-    </form>
+  <mat-step>
+    <app-food-list (itemUpdated)="handleItemUpdate($event)"></app-food-list>
   </mat-step>
   <mat-step>
     <div>
-      <button matButton matStepperPrevious>Back</button>
-      <button matButton (click)="stepper.reset()">Reset</button>
+      <button
+        mat-button
+        type="submit"
+        color="primary"
+        (click)="submitOrder()"
+        [disabled]="!firstFormGroup.value.places"
+      >
+        submit order
+      </button>
+
+      <!-- <button matButton matStepperPrevious>Back</button>
+      <button matButton (click)="stepper.reset()">Reset</button> -->
     </div>
   </mat-step>
 </mat-stepper>

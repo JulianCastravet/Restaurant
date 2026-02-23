@@ -1,48 +1,49 @@
 <mat-tab-group>
   <mat-tab label="Bar">
-    <div>Bar List</div>
-    <div class="flex flex-col gap-1">
+    <div class="flex flex-col gap-1 mt-2">
       @for (barItem of barList(); track barItem.id) {
-        <div
-          class="flex items-center justify-between p-3 border rounded-lg shadow-sm hover:shadow-md transition"
-        >
-          <!-- Quantity controls -->
-          <div class="flex items-center gap-2">
-            <button
-              mat-icon-button
-              color="primary"
-              (click)="decreaseQuantity()"
-              aria-label="Decrease"
-            >
-              <mat-icon>remove</mat-icon>
-            </button>
-
-            <span class="w-8 text-center font-bold">{{ 0 || 0 }} </span>
-
-            <button
-              mat-icon-button
-              color="primary"
-              (click)="increaseQuantity()"
-              aria-label="Increase"
-            >
-              <mat-icon>add</mat-icon>
-            </button>
-          </div>
-
-          <!-- Item name -->
-          <div class="flex-1 text-left px-4 font-medium">
-            {{ barItem.name }}
-          </div>
-
-          <!-- Price -->
-          <div class="font-semibold">
-            {{ barItem.price | currency: "EUR" }}
-          </div>
-        </div>
+        <app-food-item [foodItem]="barItem" />
       }
     </div>
   </mat-tab>
-  <mat-tab label="Pasta"> Content 2 </mat-tab>
-  <mat-tab label="Main"> Content 3 </mat-tab>
-  <mat-tab label="Dessert"> Content 3 </mat-tab>
+  <mat-tab label="Wine">
+    <div class="flex flex-col gap-1 mt-2">
+      @for (wineItem of wineList(); track wineItem.id) {
+        <app-food-item
+          [foodItem]="wineItem"
+          (itemChanged)="onItemChanged($event)"
+        />
+      }
+    </div>
+  </mat-tab>
+  <mat-tab label="Pasta">
+    <div class="flex flex-col gap-1 mt-2">
+      @for (pastaItem of pastaList(); track pastaItem.id) {
+        <app-food-item
+          [foodItem]="pastaItem"
+          (itemChanged)="onItemChanged($event)"
+        />
+      }
+    </div>
+  </mat-tab>
+  <mat-tab label="Main">
+    <div class="flex flex-col gap-1 mt-2">
+      @for (mainItem of mainList(); track mainItem.id) {
+        <app-food-item
+          [foodItem]="mainItem"
+          (itemChanged)="onItemChanged($event)"
+        />
+      }
+    </div>
+  </mat-tab>
+  <mat-tab label="Dessert">
+    <div class="flex flex-col gap-1 mt-2">
+      @for (dessertItem of dessertList(); track dessertItem.id) {
+        <app-food-item
+          [foodItem]="dessertItem"
+          (itemChanged)="onItemChanged($event)"
+        />
+      }
+    </div>
+  </mat-tab>
 </mat-tab-group>
